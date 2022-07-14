@@ -4,9 +4,6 @@ let jogador;
 checarTurno = true;
 let empate = 0
 vencedor = false;
-let quadrado = document.querySelectorAll('.quadrado-jogo');
-
-
 
 
 
@@ -15,9 +12,7 @@ function vezJogador() {
     marcarJogadorAtivo("X");
 
     turno = checarTurno ? X : O
-    console.log(turno);
     checarTurno = !checarTurno;
-    console.log(checarTurno);
 
 
     if (checarTurno == false) {
@@ -43,7 +38,7 @@ function desenhaJogador(posicaoLinha, posicaoColuna) {
         empate++;
     }
 }
-                                                   //------------------------------Spaghetti de if's para verificação de vitória------------------------
+                                                   //------------------------------if's para verificação de vitória------------------------
 function vitoriaVertical() {
     // L = linha. C = Coluna
     let L1C1 = document.querySelector(`[data-linha='${1}'][data-coluna='${1}']`);
@@ -53,7 +48,7 @@ function vitoriaVertical() {
     if (L1C1.textContent === L2C1.textContent && L1C1.textContent === L3C1.textContent && L2C1.textContent === L3C1.textContent && L1C1.textContent != "" && L2C1.textContent != "" && L3C1.textContent != "") {
         exibirResultado(`Jogador ${jogador} venceu!`);
         vencedor = true;
-        console.log("foi");
+        
     }
 
     let L1C2 = document.querySelector(`[data-linha='${1}'][data-coluna='${2}']`);
@@ -63,7 +58,7 @@ function vitoriaVertical() {
     if (L1C2.textContent === L2C2.textContent && L1C2.textContent === L3C2.textContent && L2C2.textContent === L3C2.textContent && L1C2.textContent != "" && L2C2.textContent != "" && L3C2.textContent != "") {
         exibirResultado(`Jogador ${jogador} venceu!`);
         vencedor = true;
-        console.log("foi");
+        
     }
 
     let L1C3 = document.querySelector(`[data-linha='${1}'][data-coluna='${3}']`);
@@ -73,7 +68,7 @@ function vitoriaVertical() {
     if (L1C3.textContent === L2C3.textContent && L1C3.textContent === L3C3.textContent && L2C3.textContent === L3C3.textContent && L1C3.textContent != "" && L2C3.textContent != "" && L3C3.textContent != "") {
         exibirResultado(`Jogador ${jogador} venceu!`);
         vencedor = true;
-        console.log("foi");
+        
     }
 
 }
@@ -87,7 +82,7 @@ function vitoriaHorizontal() {
     if (C1L1.textContent === C2L1.textContent && C1L1.textContent === C3L1.textContent && C2L1.textContent === C3L1.textContent && C1L1.textContent != "" && C2L1.textContent != "" && C3L1.textContent != "") {
         exibirResultado(`Jogador ${jogador} venceu!`);
         vencedor = true;
-        console.log("foi");
+        
     }
 
     let C1L2 = document.querySelector(`[data-linha='${2}'][data-coluna='${1}']`);
@@ -97,7 +92,7 @@ function vitoriaHorizontal() {
     if (C1L2.textContent === C2L2.textContent && C1L2.textContent === C3L2.textContent && C2L2.textContent === C3L2.textContent && C1L2.textContent != "" && C2L2.textContent != "" && C3L2.textContent != "") {
         exibirResultado(`Jogador ${jogador} venceu!`);
         vencedor = true;
-        console.log("foi");
+        
     }
 
     let C1L3 = document.querySelector(`[data-linha='${3}'][data-coluna='${1}']`);
@@ -107,7 +102,7 @@ function vitoriaHorizontal() {
     if (C1L3.textContent === C2L3.textContent && C1L3.textContent === C3L3.textContent && C2L3.textContent === C3L3.textContent && C1L3.textContent != "" && C2L3.textContent != "" && C3L3.textContent != "") {
         exibirResultado(`Jogador ${jogador} venceu!`);
         vencedor = true;
-        console.log("foi");
+        
     }
 
 }
@@ -122,7 +117,7 @@ function vitoriaDiagonal() {
     if (DL1C1.textContent === DL2C2.textContent && DL1C1.textContent === DL3C3.textContent && DL2C2.textContent === DL3C3.textContent && DL1C1.textContent != "" && DL2C2.textContent != "" && DL3C3.textContent != "") {
         exibirResultado(`Jogador ${jogador} venceu!`);
         vencedor = true;
-        console.log("foi");
+        
     }
 
     let DL1C3 = document.querySelector(`[data-linha='${1}'][data-coluna='${3}']`);
@@ -131,7 +126,7 @@ function vitoriaDiagonal() {
     if (DL1C3.textContent === DL2C2.textContent && DL1C3.textContent === DL3C1.textContent && DL2C2.textContent === DL3C1.textContent && DL1C3.textContent != "" && DL2C2.textContent != "" && DL3C1.textContent != "") {
         exibirResultado(`Jogador ${jogador} venceu!`);
         vencedor = true;
-        console.log("foi");
+        
     }
 }
 
