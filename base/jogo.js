@@ -16,3 +16,4 @@ function marcarJogadorAtivo(simbolo) {
     const jogadorAtivo = document.querySelector(".jogador-ativo > span");
     jogadorAtivo.innerHTML = simbolo;
 }
+
